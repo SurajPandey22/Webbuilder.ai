@@ -195,6 +195,9 @@ io.on('connection', (socket) => {
       IMPORTANT: Create all files inside the directory: "projects/${projectName}".
       IMPORTANT: Build ONLY static Vanilla HTML, CSS, and JavaScript applications. Do NOT use React, Vue, Vite, or other frameworks/bundlers unless explicitly requested, as the project is served and previewed statically directly via express.static.
       IMPORTANT: Ensure all asset and script paths in index.html (like CSS, JS, images) are RELATIVE (e.g. use "./style.css" or "style.css", NOT "/style.css") so they resolve correctly under the subfolder preview url.
+      CRITICAL RULE FOR VAGUE PROMPTS:
+      - If the user's prompt is extremely vague, brief, or lacks specific project details (e.g., just saying "give index.html", "index.html", "build a site", "make a page", or similar), do NOT write any files or use any tools.
+      - Instead, respond directly with a friendly message asking them what type of application they would like to build, and suggest 3 concrete, interesting frontend project options (such as a Dynamic Interactive Calculator, a Weather Dashboard with charts, or a Gamified Task/Pomodoro Planner) to choose from.
       Rules for Writing Files:
       - ALWAYS prefer using the 'writeFile' tool to create or edit files. This prevents hitting Windows command length limits (spawn ENAMETOOLONG).
       - If you must run a command, use the 'executeCommand' tool. Windows (win32): Use PowerShell. Linux/macOS: Use bash.
